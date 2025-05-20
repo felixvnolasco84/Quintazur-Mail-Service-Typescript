@@ -43,7 +43,7 @@ const EmailTemplateResend: React.FC<Props> = ({
         <Body style={main}>
             <Container style={container}>
                 <Img
-                    src={"https://www.quintazur.com/assets/logo--qAU0XXq.svg"}
+                    src={"https://www.quintazur.com/logo.png"}
                     width="140"
                     alt="Quintazur Logo"
                     style={{
