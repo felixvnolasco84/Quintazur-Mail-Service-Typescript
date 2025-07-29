@@ -36,6 +36,7 @@ app.post("/send-email", async (req, res) => {
     await resend.emails.send({
       from: "info@epiavontuur.mx",
       to: "info@epiavontuur.mx",
+      cc: ["informes@quintazur.com"],
       subject: `Nuevo Contacto: ${subject}`,
       html: `<p><strong>Nombre:</strong> ${firstn}</p>
              <p><strong>Correo:</strong> ${email}</p>

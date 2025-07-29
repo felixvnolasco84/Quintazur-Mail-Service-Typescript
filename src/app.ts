@@ -44,7 +44,7 @@ app.post("/send-email", async (req, res) => {
     await resend.emails.send({
       from: "informes@quintazur.com",
       to: [email],
-      cc: ["felix@polygonag.com"],
+      cc: ["informes@quintazur.com"],
       subject: `Nuevo Contacto: ${nombre} ${apellidos}`,
       html: html
     });
