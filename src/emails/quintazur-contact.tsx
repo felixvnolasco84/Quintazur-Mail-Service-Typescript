@@ -21,19 +21,12 @@ interface Props {
     email: string;
     telefono: string;
     residencia: string;
-}
+    como_nos_conociste: string;
 
-
-const testData = {
-    nombre: "Felix",
-    apellidos: "Vega",
-    email: "felix@polygonag.com",
-    telefono: "123456789",
-    residencia: "Madrid",
 }
 
 const EmailTemplateResend: React.FC<Props> = ({
-    nombre, apellidos, email, telefono, residencia,
+    nombre, apellidos, email, telefono, residencia, como_nos_conociste,
 }) => (
     <Html>
         <Head />
@@ -70,6 +63,7 @@ const EmailTemplateResend: React.FC<Props> = ({
                     <Text style={text}>Email: {email}</Text>
                     <Text style={text}>Teléfono: {telefono}</Text>
                     <Text style={text}>Residencia: {residencia}</Text>
+                    <Text style={text}>Como nos encontraste: {como_nos_conociste}</Text>
 
                     <Button href="https://www.quintazur.com/" style={button}>
                         Visitar Sitio

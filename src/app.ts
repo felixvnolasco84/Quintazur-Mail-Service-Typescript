@@ -30,18 +30,19 @@ app.post("/send-email", async (req, res) => {
     apellidos,
     email,
     telefono,
-    residencia } = req.body;
+    residencia,
+    como_nos_conociste } = req.body;
 
 
   // Renderiza tu template a HTML
   const html = await render(
     React.createElement(EmailTemplateResend, {
-      nombre, apellidos, email, telefono, residencia,
+      nombre, apellidos, email, telefono, residencia, como_nos_conociste,
     })
   );
 
   try {
-    await resend.emails.send({
+    const response = await resend.emails.send({
       from: "informes@quintazur.com",
       to: [email],
       cc: ["informes@quintazur.com"],
